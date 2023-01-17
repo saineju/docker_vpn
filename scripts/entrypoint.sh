@@ -11,5 +11,5 @@ if [[ -z ${TYPE} ]]; then
     exit 1
 fi
 
-sudo /scripts/start_vpn.sh ${TYPE} &
-/usr/bin/microsocks ${MICROSOCS_PARAMS}
+/usr/bin/microsocks ${MICROSOCS_PARAMS} &
+sudo /scripts/start_vpn.sh ${TYPE}
