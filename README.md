@@ -38,7 +38,7 @@ For SSH connection ssh ProxyCommand can be used
 ```
 host testhost
   hostname <enter real hostname>
-  ProxyCommand /usr/bin/nc -x 127.0.0.1:1080 %h %p
+  ProxyCommand bash -c 'nc --proxy-type=socks5 --proxy localhost:1080 %h %p'
 ```
 
 ### ToDo
